@@ -44,3 +44,9 @@
                     compatibility_version=6.8.0; minimum_index_compatibility_version=6.0.0-beta1}
         tagline      : You Know, for Search
         ```
+
+## 참고사항
+
+-   폴더 구조 증 modules과 plugins의 차이
+    -   modules: Elasticsearch에 의해 제공
+    -   plugins: 사용자가 임의로 기능상 Elasticsearch에 추가할 수 있는 것? (서드파티 개념)

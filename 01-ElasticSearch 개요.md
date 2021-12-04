@@ -70,6 +70,11 @@
 -   Beats: A collection of data shippers that send data to Elasticsearch of LogStash
 -   SQL
 
+### Elasticsearch 배경지식
+
+-   Elasticsearch는 JAVA 언어로 빌드되었기 때문에 JVM환경 중 힙 사이즈 영역에서 실행된다.
+    -   그러나 웬만하면 jvm.options는 건드리지 않을 것을 권장
+
 ## Elasticsearch 사용 예
 
 -   이커머스 앱이 웹서버에서 동작한다고 가정
