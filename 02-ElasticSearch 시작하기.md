@@ -1,10 +1,11 @@
 # Elasticsearch 시작하기
 
-1. 강의를 참고하여 Elasticsearch의 Elastic Stack Cloud를 개설한다.
-2. 운영체제에 맞는 [Elasticsearch](https://www.elastic.co/kr/downloads/elasticsearch) 다운로드
+## Elasticsearch 다운로드 후 설치
+
+1. 운영체제에 맞는 [Elasticsearch](https://www.elastic.co/kr/downloads/elasticsearch) 다운로드
     - 이전에 자바 설치 및 JAVA_HOME 세팅 (7.15버전 이후에는 ES_JAVA_HOME으로 바뀌었다.)
-3. [Windows 기준] 디렉터리/bin/elasticsearch.bat 실행한다.
-4. localhost:9200을 대상으로 Rest API를 요청하면 된다.
+2. [Windows 기준] 디렉터리/bin/elasticsearch.bat 실행한다.
+3. `localhost:9200`을 대상으로 Rest API를 요청하면 된다.
     - PowerShell의 Curl이나 Postman을 이용하여 요청하기
     - `curl http;//localhost:9200` 요청 결과
         ```
@@ -50,3 +51,9 @@
 -   폴더 구조 증 modules과 plugins의 차이
     -   modules: Elasticsearch에 의해 제공
     -   plugins: 사용자가 임의로 기능상 Elasticsearch에 추가할 수 있는 것? (서드파티 개념)
+
+## Kibana 다운로드 후 설치
+
+-   [Kibana 다운로드 페이지](https://www.elastic.co/kr/downloads/kibana)에서 운영체제에 맞게 다운로드.
+-   kibana.bat을 실행하면 1~2분 정도 소요된다.
+-   `localhost:5601`에 웹브라우저를 이용핳여 접속
