@@ -64,3 +64,13 @@
 -   Documents가 저장되는 곳(index)으로 documents가 같은 성격의 Document를 모은 것이다.
     -   물리적인 제한 개수는 없음.
 -   RDBMS의 개념에 빗대면 Table이라고 볼 수 있다.
+
+## Indicies
+
+-   [Index vs Indicies](https://racoonlotty.tistory.com/entry/Elasticsearch-Index-vs-Indices)
+
+Elasticsearch에서 사용하는 용어
+
+-   Index: `색인`한 데이터
+-   Indexing: 색인하는 과정
+-   Indicies: `매핑 정보를 저장하는 논리적인 데이터 공간`
