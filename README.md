@@ -12,3 +12,11 @@
 ## 📕 커리큘럼
 
 (작성 예정)
+
+### Transcript
+
+```js
+function getText(transcript = '') {
+    return transcript.replace(/\n\n/g, '').replace(/\./g, '.\n\n');
+}
+```
