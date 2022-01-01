@@ -47,7 +47,6 @@
     }
     ```
 -   결과
-
     ```json
     {
         "_index": "products",
