@@ -10,8 +10,8 @@ PUT /reviews
             "product_id": { "type": "integer" },
             "author": {
                 "properties": {
-                    "first_name": { "type": "string" },
-                    "last_name": { "type": "string" },
+                    "first_name": { "type": "text" },
+                    "last_name": { "type": "text" },
                     "email": { "type": "keyword" }
                 }
             }
@@ -34,6 +34,7 @@ PUT /reviews
     -   이메일 주소를 full-text로 처리할 일은 아마 없을 것이다
 
 ```json
+PUT /reviews/_doc/1
 {
     "rating": 5.0,
     "content": "Outstanding course! Bo really taught me a lot about Elasticsearch!",
