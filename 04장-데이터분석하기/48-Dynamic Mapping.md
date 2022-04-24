@@ -74,3 +74,75 @@ GET /products/_mapping
   }
 }
 ```
+
+## 또 다른 예제
+
+-   동적, 정적 매핑 두 가지 방식을 모두 활용할 수 있는 예제
+-   꼭 동적이나 정적 하나만을 선택해야 하는 방식은 아님
+
+```json
+PUT /people
+{
+  "mappings": {
+    "properties": {
+      "first_name": {
+        "type": "text"
+      }
+    }
+  }
+}
+```
+
+```json
+POST /people/_doc
+{
+  "first_name": "Bo",
+  "last_name": "Andersen"
+}
+// 결과
+{
+  "_index" : "people",
+  "_type" : "_doc",
+  "_id" : "J9Q1W4ABeHp6sT-Cdp7N",
+  "_version" : 1,
+  "result" : "created",
+  "_shards" : {
+    "total" : 2,
+    "successful" : 1,
+    "failed" : 0
+  },
+  "_seq_no" : 1,
+  "_primary_term" : 1
+}
+
+```
+
+```json
+GET /people/_mapping
+{
+  "people" : {
+    "mappings" : {
+      "properties" : {
+        "first_name" : {
+          "type" : "text"
+        },
+        "last_name" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+# Clearn up
+
+```
+DELETE /people
+```
